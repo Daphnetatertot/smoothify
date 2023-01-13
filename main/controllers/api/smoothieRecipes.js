@@ -1,3 +1,4 @@
+// change project to smoothy related name 
 const router = require('express').Router();
 const { Project } = require('../../models');
 const withAuth = require('../../utils/auth');
