@@ -38,6 +38,14 @@ const delButtonHandler = async (event) => {
   }
 };
 
+const highlightIngredient = async (event) => {
+
+  alert('You clicked an ingredient');
+
+};
+
+
+
 document
   .querySelector('.new-recipe-form')
   .addEventListener('submit', newFormHandler);
@@ -45,3 +53,7 @@ document
 document
   .querySelector('.recipe-list')
   .addEventListener('click', delButtonHandler);
+
+document
+  .querySelector('.ingredientbtn')
+  .addEventListener('click', highlightIngredient);

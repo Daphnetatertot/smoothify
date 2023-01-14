@@ -4,6 +4,9 @@ const { Project } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
+if(!req.body) {
+  res.status(400).send('Cannot POST smoothie : no requset body!'); // ?  
+}
   try {
     const newProject = await Project.create({
       ...req.body,
@@ -12,7 +15,7 @@ router.post('/', withAuth, async (req, res) => {
 
     res.status(200).json(newProject);
   } catch (err) {
-    res.status(400).json(err);
+    res.status(500).json(err);
   }
 });
 
