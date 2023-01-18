@@ -7,23 +7,18 @@ header, .project:not(:last-child) {
   border: none;
   padding: 0;
   cursor: pointer;
-  color: #fe5bac;
+  color: #1b89bc;
   text-decoration: none;
   font-size: 100%;
 }
 
 .no-button:hover {
-  color: #fe5bac;
+  color: #065b83;
   text-decoration: underline;
 }
 
 .dollar-amount {
-  color: #fe5bac;
+  color: #056605;
   font-weight: bold;
   margin-left: -5px;
-}
-#emoji{
-    font-family: 'NotoEmojiRegular';
-    font-weight: normal;
-    font-style: normal;
 }

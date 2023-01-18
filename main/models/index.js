@@ -1,13 +1,13 @@
 const User = require('./User');
-const Recipe = require('./Recipe');
+const Project = require('./Project');
 
-User.hasMany(Recipe, {
+User.hasMany(Project, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });
 
-Recipe.belongsTo(User, {
+Project.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-module.exports = { User, Recipe };
+module.exports = { User, Project };
