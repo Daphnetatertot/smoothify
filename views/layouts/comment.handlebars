@@ -1,0 +1,46 @@
+<form>
+  <fieldset>
+    <legend>Add a Comment</legend>
+    <!-- TITLE -->
+    <div class="form-group">
+      <label for="comment-title">Title</label><br>
+      <input class="form-control"
+        id="comment-title"
+        type="text"
+        name="title"
+        placeholder="Title"/>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="form-group">
+      <label for="comment-content">Content</label><br>
+      <textarea class="form-control"
+      id="comment-content"
+      name="content"
+      rows="10"
+      placeholder="Your comment..."/></textarea>
+    </div>
+  </fieldset>
+
+  <!-- BUTTON -->
+  <div class="form-group">
+    <button class="btn btn-primary" type="submit">Post</button>
+  </div>
+</form>
+
+<a href="/">Cancel</a>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <h2>{{review.Smoothie}}</h2>
+    <p><a href="/comment/{{comment._id}}/edit">Edit</a></p>
+    <p><form method="POST" action="/comment/{{comment._id}}?_method=DELETE">
+        <button class="btn btn-primary" type="submit">Delete</button>
+    </form></p>
+
+    <hr>
+f
+    <!-- Comment form -->
+    {{> comment-form}}
+
+  </div>
+</div>
