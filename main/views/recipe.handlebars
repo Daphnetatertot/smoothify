@@ -1,14 +1,17 @@
 <div class="text-center">
   <h2>{{name}}</h2>
   <p>{{{get_emoji}}}</p>
-  <p>{{description}}</p>
+  <p>Smoothie made with the following ingredients:</p>
+  <p id="ingredients">{{get_ingredients description}}</p>
+  <p id="calories">The total calories for this smoothie are: </p>
   <p>Created by {{user.name}} on {{format_date date_created}}</p>
   <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount needed_funding}}</span>
-    needed
-  </p>
-  <p>
-    <button class="btn btn-primary">Review this Recipe!</button>
   </p>
 </div>
+<div class="container text-center">
+    <label for="comment" name="comment">Review this Smoothie!</label>
+    <p><textarea id="comment"></textarea></p>
+    <p></p><button id="addComments" class="btn btn-primary">Add Review</button></div></p>
+    <div id="allComments"></div>
+</div>
+<script src="../js/recipe.js"></script>

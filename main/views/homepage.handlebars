@@ -1,78 +1,20 @@
-<!-- Loop over each object in the projects array -->
-<div class="row">
-  <div class="col-md-6"></div>
-  <div class="col-md-6">
-    <h2>Login</h2>
-
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login">email:</label>
-        <input class="form-input" type="text" id="email-login" />
-      </div>
-      <div class="form-group">
-        <label for="password-login">password:</label>
-        <input class="form-input" type="password" id="password-login" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
-         <!-- Trigger/Open The Modal -->
-        <button class="btn btn-primary" type="submit" id="myBtn">Register</button>
-      </div>
-    </form>
-  </div>
-
-
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-        <h2>Signup</h2>
-
-    <form class="form signup-form">
-      <div class="form-group">
-        <label for="name-signup">name:</label>
-        <input class="form-input" type="text" id="name-signup" />
-      </div>
-      <div class="form-group">
-        <label for="email-signup">email:</label>
-        <input class="form-input" type="text" id="email-signup" />
-      </div>
-      <div class="form-group">
-        <label for="password-signup">password:</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
-      </div>
-    </form>
-  </div>
-
-</div> 
-
-<script src="./js/login.js"></script>
+<!-- Loop over each object in the recipes array -->
 {{#each recipes as |recipe| }}
-<div class="row mb-4 recipe">
+<div class="row mb-4 project">
   <div class="col-md-5">
     <h2>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
       {{{get_emoji}}}
       <a href="/recipe/{{recipe.id}}">{{recipe.name}}</a>
     </h2>
-    <p>
-      <span for="img" aria-label="money">💲</span>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount">{{format_amount recipe.needed_funding}}</span>
-      needed!
-    </p>
-    <p>Created by {{recipe.user.name}} on {{format_date recipe.date_created}}</p>
+    <p></p>
+
   </div>
   <div class="col-md-7">
     <p>
       {{recipe.description}}
     </p>
+        <p>Created by {{recipe.user.name}} on {{format_date recipe.date_created}}</p>
   </div>
 </div>
 {{/each}}

@@ -6,37 +6,34 @@
 
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>Create a New Smoothie Recipe:</h3>
+    <h3>Blend a New Smoothie:</h3>
 
     <form class="form new-recipe-form">
       <div class="form-group">
-        <label for="recipe-name">recipe name:</label>
+        <label for="recipe-name">smoothie name:</label>
         <input class="form-input" type="text" id="recipe-name" name="recipe-name" />
       </div>
-      <div class="form-group ingredientbtn">
-      <p><label for="recipe-funding">Choose your ingredients (max 4):</label></p>
-        <img class="ingredientbtn" id="strawberry" src="https://via.placeholder.com/120">
-        <img class="ingredientbtn" id="banana" src="https://via.placeholder.com/120">
-        <img class="ingredientbtn" id="blueberry" src="https://via.placeholder.com/120">
-        <img class="ingredientbtn" src="https://via.placeholder.com/120">
-        <img class="ingredientbtn" src="https://via.placeholder.com/120">
-        <img class="ingredientbtn" src="https://via.placeholder.com/120">
-        <img class="ingredientbtn" src="https://via.placeholder.com/120">
-        <img class="ingredientbtn" src="https://via.placeholder.com/120">
-      </div>
       <div class="form-group">
-      <p><label for="recipe-funding">Choose one base:</label></p>
-        <img src="https://via.placeholder.com/120">
-        <img src="https://via.placeholder.com/120">
-        <img src="https://via.placeholder.com/120">
-        <img src="https://via.placeholder.com/120">
-      </div>     
+        <label for="recipe-funding">choose your ingredients:</label>
+      <div class="row">
+        <div class="col-sm text-center"><p id="strawberry" class="oma-5x oma-black-strawberry"></p><p>strawberry</p></div>
+        <div class="col-sm text-center"><p id="banana" class="oma-5x oma-black-banana"></p><p>banana</p></div>
+        <div class="col-sm text-center"><p id="blueberries" class="oma-5x oma-black-blueberries"></p><p>blueberries</p></div>
+        <div class="col-sm text-center"><p id="kiwi" class="oma-5x oma-black-kiwi-fruit"></p><p>kiwi</p></div>
+      </div>
+      <div class="row">
+        <div class="col-sm text-center"><p id="pineapple" class="oma-5x oma-black-pineapple"></p><p>pineapple</p></div>
+        <div class="col-sm text-center"><p id="orange" class="oma-5x oma-black-tangerine"></p><p>orange</p></div>
+        <div class="col-sm text-center"><p id="cherry" class="oma-5x oma-black-cherries"></p><p>cherry</p></div>
+        <div class="col-sm text-center"><p id="red-apple" class="oma-5x oma-black-red-apple"></p><p>red apple</p></div>
+      </div>
+      </div>
       <div class="form-group">
         <label for="recipe-desc">description:</label>
         <textarea class="form-input" id="recipe-desc" name="recipe-desc"></textarea>
       </div>
       <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
+        <button type="submit" class="btn btn-primary">Blend</button>
       </div>
     </form>
   </div>
